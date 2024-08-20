@@ -13,3 +13,30 @@ export const deleteFoodApi = (id) =>{
     
     });
 }
+export const createFoodApi = (foodData) =>{
+    return axios({
+        url: 'https://6645cc65b8925626f8933a82.mockapi.io/food',
+        method: 'POST',
+        data: foodData,
+    
+    });
+}
+
+export const getDetailFoodApi = (id) =>{
+    return axios({
+        url: `https://6645cc65b8925626f8933a82.mockapi.io/food/${id}`,
+        method: 'GET',
+        
+    
+    });
+}
+
+export const updateFoodApi = (foodData) =>{
+    return axios({
+        url: `https://6645cc65b8925626f8933a82.mockapi.io/food/${foodData.id}`,
+        method: 'PUT',
+        data: foodData,
+    
+    });
+
+}
